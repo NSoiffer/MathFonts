@@ -77,6 +77,12 @@
 </head>
 <body>
   <h1>Unicode-Math Accents Table</h1>
+
+  <details id="fontselector">
+    <summary><b>Font Column Selection</b></summary>
+  </details>
+
+  <h3>Table of Accents</h3>
   <table>
     <thead>
       <tr>
@@ -182,9 +188,26 @@
           if (cls) td.className = cls;
           td.innerHTML = templateHTML;
           row.appendChild(td);
-        });
+        });						
       });
+        const fontsel=document.getElementById("fontselector");
+                classes.forEach(cls => {
+		    const inp = document.createElement('input');
+		    inp.type="checkbox";
+		    inp.id="select"+cls;
+		    inp.checked=true;
+		    inp.setAttribute("onChange","showColumn(this)");
+		    const lb = document.createElement('label');
+		    lb.textContent=cls + " ";
+                    lb.setAttribute("for","select"+cls);
+		    fontsel.appendChild(inp);
+		    fontsel.appendChild(lb);
+		});
     });
+    function showColumn(n) {
+	if(n.checked) {
+	    
+    }
   </script>
 
 </body>
