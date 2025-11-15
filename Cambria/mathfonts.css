@@ -37,13 +37,6 @@ Some Web services may also provide them as Web fonts. For details, see
 }
 */
 
-.htmlmathparagraph, m|mtext {
-    font-family: Cambria;
-}
-m|math {
-    font-family: Cambria Math;
-}
-
 .oldstylenumbers {
     font-variant-numeric: oldstyle-nums; /* Recommended syntax */
     font-feature-settings: 'onum';         /* OpenType feature syntax */

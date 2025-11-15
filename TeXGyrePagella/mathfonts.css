@@ -44,13 +44,6 @@ http://www.gust.org.pl/projects/e-foundry/
          url('texgyrepagella-math.woff');
 }
 
-.htmlmathparagraph, m|mtext {
-    font-family: TeX Gyre Pagella;
-}
-m|math {
-    font-family: TeX Gyre Pagella Math;
-}
-
 .oldstylenumbers {
     font-variant-numeric: oldstyle-nums; /* Recommended syntax */
     font-feature-settings: 'onum';         /* OpenType feature syntax */

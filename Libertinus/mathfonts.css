@@ -42,13 +42,6 @@ the files in this directory for details.
          url('libertinusmath-regular.woff');
 }
 
-.htmlmathparagraph, m|mtext {
-    font-family: Libertinus Serif;
-}
-m|math {
-    font-family: Libertinus Math;
-}
-
 .oldstylenumbers {
     font-variant-numeric: oldstyle-nums;   /* Recommended syntax */
     font-feature-settings: 'onum';         /* OpenType feature syntax */

@@ -43,13 +43,6 @@ http://www.gust.org.pl/projects/e-foundry/
          url('texgyrebonum-math.woff');
 }
 
-.htmlmathparagraph, m|mtext {
-    font-family: TeX Gyre Bonum;
-}
-m|math {
-    font-family: TeX Gyre Bonum Math;
-}
-
 .oldstylenumbers {
     font-variant-numeric: oldstyle-nums; /* Recommended syntax */
     font-feature-settings: 'onum';         /* OpenType feature syntax */

@@ -34,13 +34,6 @@ http://www.gust.org.pl/projects/e-foundry/
          url('latinmodern-math.woff2'), url('latinmodern-math.woff');
 }
 
-.htmlmathparagraph, m|mtext {
-    font-family: Latin Modern Roman, LMRoman12;
-}
-m|math {
-    font-family: Latin Modern Math;
-}
-
 .oldstylenumbers {
     font-variant-numeric: oldstyle-nums; /* Recommended syntax */
     font-feature-settings: 'onum';         /* OpenType feature syntax */

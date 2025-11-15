@@ -46,13 +46,6 @@ http://mirrors.ctan.org/fonts/
     font-weight: bold;
 }
 
-.htmlmathparagraph, m|mtext {
-    font-family: XITS;
-}
-m|math {
-    font-family: XITS Math;
-}
-
 .oldstylenumbers {
     font-variant-numeric: oldstyle-nums;   /* Recommended syntax */
     font-feature-settings: 'onum';         /* OpenType feature syntax */
