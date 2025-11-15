@@ -16,13 +16,6 @@ to woff.
          url('NewCMSansMath-Regular.woff2'), url('NewCMSansMath-Regular.woff');
 }
 
-.htmlmathparagraph, m|mtext {
-    font-family: NewComputerModernSansMath;
-}
-m|math {
-    font-family: NewComputerModernSansMath;
-}
-
 @font-feature-values NewComputerModernSansMath { @stylistic { calligraphic: 1; } }
 m|*.calligraphic {
     font-variant-alternates: stylistic(calligraphic); /* Recommended syntax */

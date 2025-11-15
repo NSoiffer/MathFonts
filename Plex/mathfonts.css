@@ -42,10 +42,3 @@ or package managers.
     font-style: italic;
 }
 
-.htmlmathparagraph, m|mtext {
-    font-family: "IBMPlexSerif";
-}
-m|math {
-    font-family: "IBMPlexMath";
-}
-

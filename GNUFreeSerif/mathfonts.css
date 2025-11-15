@@ -28,13 +28,6 @@ development version.
     font-style: italic;
 }
 
-.htmlmathparagraph, m|mtext {
-    font-family: FreeSerif;
-}
-m|math {
-    font-family: FreeSerif;
-}
-
 .oldstylenumbers {
     font-variant-numeric: oldstyle-nums;   /* Recommended syntax */
     font-feature-settings: 'onum';         /* OpenType feature syntax */

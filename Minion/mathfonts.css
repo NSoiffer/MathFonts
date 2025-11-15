@@ -18,13 +18,6 @@ be added to make this work correctly.
 }
 */
 
-.htmlmathparagraph, m|mtext {
-    font-family: Minion Math;
-}
-m|math {
-    font-family: Minion Math;
-}
-
 .oldstylenumbers {
     font-variant-numeric: oldstyle-nums; /* Recommended syntax */
     font-feature-settings: 'onum';         /* OpenType feature syntax */

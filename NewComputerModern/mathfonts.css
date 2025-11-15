@@ -45,13 +45,6 @@ to woff.
     font-style: italic;
 }
 
-.htmlmathparagraph, m|mtext {
-    font-family: "NewComputerModern10";
-}
-m|math {
-    font-family: NewComputerModernMath;
-}
-
 @font-feature-values NewComputerModernMath { @stylistic { calligraphic: 1; } }
 m|*.calligraphic {
     font-variant-alternates: stylistic(calligraphic); /* Recommended syntax */

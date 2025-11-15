@@ -42,13 +42,6 @@ http://www.gust.org.pl/projects/e-foundry/
          url('texgyreschola-math.woff2'), url('texgyreschola-math.woff');
 }
 
-.htmlmathparagraph, m|mtext {
-    font-family: TeX Gyre Schola;
-}
-m|math {
-    font-family: TeX Gyre Schola Math;
-}
-
 .oldstylenumbers {
     font-variant-numeric: oldstyle-nums; /* Recommended syntax */
     font-feature-settings: 'onum';         /* OpenType feature syntax */

@@ -17,13 +17,6 @@ http://mirrors.ctan.org/fonts/
          url('Asana-Math.woff2'), url('Asana-Math.woff');
 }
 
-.htmlmathparagraph, m|mtext {
-    font-family: Asana Math;
-}
-m|math {
-    font-family: Asana Math;
-}
-
 .oldstylenumbers {
     font-variant-numeric: oldstyle-nums;   /* Recommended syntax */
     font-feature-settings: 'onum';         /* OpenType feature syntax */

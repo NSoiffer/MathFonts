@@ -38,10 +38,3 @@ TeX distributions or package managers.
     font-style: italic;
 }
 
-.htmlmathparagraph, m|mtext {
-    font-family: "Noto Sans";
-}
-m|math {
-    font-family: "Noto Sans Math";
-}
-

@@ -17,13 +17,6 @@ converted to WOFF.
     src: local('Euler Math'), local('Euler-Math'), url('Euler-Math.woff2'), url('Euler-Math.woff');
 }
 
-.htmlmathparagraph, m|mtext {
-    font-family: Euler;
-}
-m|math {
-    font-family: Euler;
-}
-
 .oldstylenumbers {
     font-variant-numeric: oldstyle-nums;   /* Recommended syntax */
     font-feature-settings: 'onum';         /* OpenType feature syntax */

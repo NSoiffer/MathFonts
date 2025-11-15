@@ -41,13 +41,6 @@ http://www.gust.org.pl/projects/e-foundry/
          url('texgyretermes-math.woff2'), url('texgyretermes-math.woff');
 }
 
-.htmlmathparagraph, m|mtext {
-    font-family: TeX Gyre Termes;
-}
-m|math {
-    font-family: TeX Gyre Termes Math;
-}
-
 .oldstylenumbers {
     font-variant-numeric: oldstyle-nums; /* Recommended syntax */
     font-feature-settings: 'onum';         /* OpenType feature syntax */

@@ -17,13 +17,6 @@ converted to WOFF.
          url('LeteSansMath.woff2'), url('LeteSansMath.woff');
 }
 
-.htmlmathparagraph, m|mtext {
-    font-family: Lete Sans Math;
-}
-m|math {
-    font-family: Lete Sans Math;
-}
-
 .oldstylenumbers {
     font-variant-numeric: oldstyle-nums;   /* Recommended syntax */
     font-feature-settings: 'onum';         /* OpenType feature syntax */

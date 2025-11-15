@@ -27,9 +27,3 @@ in this directory for details.
          url('Garamond-Math.woff');
 }
 
-.htmlmathparagraph, m|mtext {
-    font-family: EB Garamond;
-}
-m|math {
-    font-family: Garamond Math;
-}

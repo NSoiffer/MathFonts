@@ -53,13 +53,6 @@ converted to WOFF.
     font-weight: bold;
 }
 
-.htmlmathparagraph, m|mtext {
-    font-family: Luciole;
-}
-m|math {
-    font-family: Luciole Math;
-}
-
 /* No math script */
 m|*.calligraphic {
 }

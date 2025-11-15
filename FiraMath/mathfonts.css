@@ -12,10 +12,3 @@ this directory for details.
          url('FiraMath-Regular.woff2'), url('FiraMath-Regular.woff');
 }
 
-.htmlmathparagraph, m|mtext {
-    /* TODO: use FiraGO instead? */
-    font-family: Fira Math;
-}
-m|math {
-    font-family: Fira Math;
-}

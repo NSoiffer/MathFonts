@@ -32,13 +32,6 @@ for details. This fonts is available on most Linux distributions.
     font-style: italic;
 }
 
-.htmlmathparagraph, m|mtext {
-    font-family: DejaVu Serif;
-}
-m|math {
-    font-family: DejaVu Math TeX Gyre;
-}
-
 .oldstylenumbers {
     font-variant-numeric: oldstyle-nums;   /* Recommended syntax */
     font-feature-settings: 'onum';         /* OpenType feature syntax */

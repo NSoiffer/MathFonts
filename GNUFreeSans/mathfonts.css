@@ -28,13 +28,6 @@ development version.
     font-style: oblique;
 }
 
-.htmlmathparagraph, m|mtext {
-    font-family: FreeSans;
-}
-m|math {
-    font-family: FreeSans;
-}
-
 .oldstylenumbers {
     font-variant-numeric: oldstyle-nums;   /* Recommended syntax */
     font-feature-settings: 'onum';         /* OpenType feature syntax */
