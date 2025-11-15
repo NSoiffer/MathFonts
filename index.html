@@ -1,97 +1,177 @@
-<!doctype html>
-<html>
-  <head>
-    <title>Mathematical OpenType Fonts</title>
-    <meta charset="utf-8"/>
-    <script type="text/javascript" src="/MathFonts/font-selection.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-          let font_data = document.getElementById("font_data");
-          for (let value in mathfont_list) {
-              if (value == "Default")
-                  continue;
-              font_data.insertAdjacentHTML("beforeend",
-                                           `<li><a href="${value}/">${mathfont_list[value]}</a></li>`);
-          }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Unicode-Math Accents Table</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 14pt;
+    }
+    th {
+      font-size: 10pt;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 6px 10px;
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    td.LeteSansMath {
+      max-width: 6em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    /* It is necessary to override the user agent stylesheet's setting of 'math-font-family' for the math element */
+    .Asana, .Asana math         { font-family: 'Asana Math'; }
+    .Cambria, .Cambria math     { font-family: 'Cambria Math'; }
+    .DejaVu, .DejaVu math       { font-family: 'DejaVu Math TeX Gyre'; }
+    .FiraMath, .FiraMath math   { font-family: 'Fira Math'; }
+    .Garamond, .Garamond math   { font-family: 'Garamond Math'; }
+    .GFS_NeoHellenic, .GFS_NeoHellenic math { font-family: 'GFS Neohellenic Math'; }
+    .LatinModern, .LatinModern math { font-family: 'Latin Modern Math'; }
+    .LeteSansMath, .LeteSansMath math { font-family: 'Lete Sans Math'; }
+    .Libertinus, .Libertinus math { font-family: 'Libertinus Math'; }
+    .LucidaBright, .LucidaBright math { font-family: 'Lucida Bright Math'; }
+    .NewComputerModern, .NewComputerModern math { font-family: 'NewComputerModernMath'; }
+    .NewComputerModernSans, .NewComputerModernSans math { font-family: 'NewComputerModernSansMath'; }
+    .Minion, .Minion math       { font-family: 'Minion Math'; }
+    .STIX, .STIX math           { font-family: 'STIX Two Math'; }
+    .TeXGyreBonum, .TeXGyreBonum math { font-family: 'TeX Gyre Bonum Math'; }
+    .TeXGyrePagella, .TeXGyrePagella math { font-family: 'TeX Gyre Pagella Math'; }
+    .TeXGyreSchola, .TeXGyreSchola math { font-family: 'TeX Gyre Schola Math'; }
+    .TeXGyreTermes, .TeXGyreTermes math { font-family: 'TeX Gyre Termes Math'; }
+    .XITS, .XITS math           { font-family: 'XITS Math'; }
+
+</style>
+
+  <!-- Load provider stylesheets for math fonts -->
+  <link rel="stylesheet" type="text/css" href="https://nsoiffer.github.io/MathFonts/Asana/mathfonts.css">
+  <link rel="stylesheet" type="text/css" href="https://nsoiffer.github.io/MathFonts/DejaVu/mathfonts.css">
+  <link rel="stylesheet" type="text/css" href="https://nsoiffer.github.io/MathFonts/FiraMath/mathfonts.css">
+  <link rel="stylesheet" type="text/css" href="https://nsoiffer.github.io/MathFonts/Garamond/mathfonts.css">
+  <link rel="stylesheet" type="text/css" href="https://nsoiffer.github.io/MathFonts/GFS_NeoHellenic/mathfonts.css">
+  <link rel="stylesheet" type="text/css" href="https://nsoiffer.github.io/MathFonts/LatinModern/mathfonts.css">
+  <link rel="stylesheet" type="text/css" href="https://nsoiffer.github.io/MathFonts/LeteSansMath/mathfonts.css">
+  <link rel="stylesheet" type="text/css" href="https://nsoiffer.github.io/MathFonts/Libertinus/mathfonts.css">
+  <link rel="stylesheet" type="text/css" href="https://nsoiffer.github.io/MathFonts/NewComputerModern/mathfonts.css">
+  <link rel="stylesheet" type="text/css" href="https://nsoiffer.github.io/MathFonts/NewComputerModernSans/mathfonts.css">
+  <link rel="stylesheet" type="text/css" href="https://nsoiffer.github.io/MathFonts/STIX/mathfonts.css">
+  <link rel="stylesheet" type="text/css" href="https://nsoiffer.github.io/MathFonts/TeXGyreBonum/mathfonts.css">
+  <link rel="stylesheet" type="text/css" href="https://nsoiffer.github.io/MathFonts/TeXGyrePagella/mathfonts.css">
+  <link rel="stylesheet" type="text/css" href="https://nsoiffer.github.io/MathFonts/TeXGyreSchola/mathfonts.css">
+  <link rel="stylesheet" type="text/css" href="https://nsoiffer.github.io/MathFonts/TeXGyreTermes/mathfonts.css">
+  <link rel="stylesheet" type="text/css" href="https://nsoiffer.github.io/MathFonts/XITS/mathfonts.css">
+
+</head>
+<body>
+  <h1>Unicode-Math Accents Table</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Unicode</th>
+        <th>Description</th>
+        <th>Glyph</th>
+        <th class="Asana">Asana</th>
+        <th class="Cambria">Cambria (local only)</th>
+        <th class="DejaVu">DejaVu</th>
+        <th class="FiraMath">FiraMath</th>
+        <th class="Garamond">Garamond</th>
+        <th class="GFS_NeoHellenic">GFS NeoHellenic</th>
+        <th class="LatinModern">Latin Modern</th>
+        <th class="LeteSansMath">Lete Sans Math</th>
+        <th class="Libertinus">Libertinus</th>
+        <th class="LucidaBright">Lucida Bright (local only)</th>
+        <th class="NewComputerModern">New Computer Modern</th>
+        <th class="NewComputerModernSans">New Computer Modern Sans</th>
+        <th class="Minion">Minion (local only)</th>
+        <th class="STIX">STIX</th>
+        <th class="TeXGyreBonum">TeX Gyre Bonum</th>
+        <th class="TeXGyrePagella">TeX Gyre Pagella</th>
+        <th class="TeXGyreSchola">TeX Gyre Schola</th>
+        <th class="TeXGyreTermes">TeX Gyre Termes</th>
+        <th class="XITS">XITS</th>
+      </tr>
+    </thead>
+  <tbody>
+    <tr><td>U+0060</td><td>grave</td><td>`</td><td><math><mover><mi>x</mi><mo>&#x0060;</mo></mover></math></td></tr>
+    <tr style="background-color: #fffacd"><td>U+0300</td><td>grave</td><td>◌̀</td><td><math><mover><mi>x</mi><mo>&#x0300;</mo></mover></math></td></tr>
+    <tr><td>U+00B4</td><td>acute</td><td>&#x00B4;</td><td><math><mover><mi>x</mi><mo>&#x00B4;</mo></mover></math></td></tr>
+    <tr style="background-color: #fffacd"><td>U+0301</td><td>acute</td><td>◌́</td><td><math><mover><mi>x</mi><mo>&#x0301;</mo></mover></math></td></tr>
+    <tr><td>U+0302</td><td>hat</td><td>^</td><td><math><mover><mi>x</mi><mo>&#x005E;</mo></mover></math></td></tr>
+    <tr style="background-color: #fffacd"><td>U+005E</td><td>hat</td><td>◌̂</td><td><math><mover><mi>x</mi><mo>&#x0302;</mo></mover></math></td></tr>
+    <tr><td>U+007E</td><td>tilde</td><td>~</td><td><math><mover><mi>x</mi><mo>&#x007E;</mo></mover><mo>,</mo><mover><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x0303;</mo></mover></math></td></tr>
+    <tr style="background-color: #fffacd"><td>U+0303</td><td>tilde</td><td>◌̃</td><td><math><mover><mi>x</mi><mo>&#x0303;</mo></mover><mo>,</mo><mover><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x0303;</mo></mover></math></td></tr>
+    <tr><td>U+00AF</td><td>overline</td><td>&#x00AF;</td><td><math><mover><mi>x</mi><mo>&#x00AF;</mo></mover></math></td></tr>
+    <tr style="background-color: #fffacd"><td>U+0304</td><td>macron</td><td>◌̄</td><td><math><mover><mi>x</mi><mo>&#x0304;</mo></mover></math></td></tr>
+    <tr style="background-color: #fffacd"><td>U+0305</td><td>overbar</td><td>◌̅</td><td><math><mover><mi>x</mi><mo>&#x0305;</mo></mover><mo>,</mo><mover><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x0305;</mo></mover></math></td></tr>
+    <tr style="background-color: #fffacd"><td>U+005F</td><td>lowline(mover)</td><td>_</td><td><math><mover><mi>x</mi><mo>&#x005F;</mo></mover><mo>,</mo><mover><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x0332;</mo></mover></math></td></tr>
+    <tr><td>U+005F</td><td>lowline</td><td>_</td><td><math><munder><mi>x</mi><mo>&#x005F;</mo></munder><mo>,</mo><munder><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x0332;</mo></munder></math></td></tr>
+
+    <tr style="background-color: #fffacd"><td>U+0332</td><td>underbar</td><td>◌̲</td><td><math><munder><mi>x</mi><mo>&#x0332;</mo></munder><mo>,</mo><munder><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x0332;</mo></munder></math></td></tr>
+
+    <tr><td>U+0306</td><td>breve</td><td>◌̆</td><td><math><mover><mi>x</mi><mo>&#x0306;</mo></mover></math></td></tr>
+    <tr><td>U+002E</td><td>dot above</td><td>.</td><td><math><mover><mi>x</mi><mo>&#x002E;</mo></mover></math></td></tr>
+    <tr style="background-color: #fffacd"><td>U+0307</td><td>dot above</td><td>◌̇</td><td><math><mover><mi>x</mi><mo>&#x0307;</mo></mover></math></td></tr>
+    <tr><td>U+002E U+002E</td><td>double dot</td><td>..</td><td><math><mover><mi>x</mi><mo>..</mo></mover></math></td></tr>
+    <tr style="background-color: #fffacd"><td>U+0308</td><td>double dot</td><td>◌̈</td><td><math><mover><mi>x</mi><mo>&#x0308;</mo></mover></math></td></tr>
+    <tr><td>U+0309</td><td>hook above</td><td>◌̉</td><td><math><mover><mi>x</mi><mo>&#x0309;</mo></mover></math></td></tr>
+    <tr><td>U+030A</td><td>ring</td><td>◌̊</td><td><math><mover><mi>x</mi><mo>&#x030A;</mo></mover></math></td></tr>
+    <tr><td>U+030C</td><td>caron</td><td>◌̌</td><td><math><mover><mi>x</mi><mo>&#x030C;</mo></mover></math></td></tr>
+    <tr><td>U+20D0</td><td>left harpoon</td><td>⃐</td><td><math><mover><mi>x</mi><mo>&#x20D0;</mo></mover><mo>,</mo><mover><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x20D0;</mo></mover></math></td></tr>
+    <tr style="background-color: #fffacd"><td>U+21BC</td><td>left harpoon</td><td>&#x21BC;</td><td><math><mover><mi>x</mi><mo>&#x21BC;</mo></mover><mo>,</mo><mover><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x21BC;</mo></mover></math></td></tr>
+    <tr><td>U+20D1</td><td>right harpoon</td><td>⃑</td><td><math><mover><mi>x</mi><mo>&#x20D1;</mo></mover><mo>,</mo><mover><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x20D1;</mo></mover></math></td></tr>
+    <tr style="background-color: #fffacd"><td>U+21C0</td><td>right harpoon</td><td>&#x21C0;</td><td><math><mover><mi>x</mi><mo>&#x21C0;</mo></mover><mo>,</mo><mover><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x21C0;</mo></mover></math></td></tr>
+    <tr><td>U+2192</td><td>right arrow</td><td>⃗</td><td><math><mover><mi>x</mi><mo>&#x2192;</mo></mover><mo>,</mo><mover><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x2192;</mo></mover></math></td></tr>
+    <tr style="background-color: #fffacd"><td>U+27F6</td><td>long right arrow</td><td>&#x27F6;</td><td><math><mover><mi>x</mi><mo>&#x27F6;</mo></mover><mo>,</mo><mover><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x27F6;</mo></mover></math></td></tr>
+    <tr><td>U+20DB</td><td>triple dots</td><td>⃛</td><td><math><mover><mi>x</mi><mo>&#x20DB;</mo></mover></math></td></tr>
+    <tr><td>U+20DC</td><td>four dots</td><td>⃜</td><td><math><mover><mi>x</mi><mo>&#x20DC;</mo></mover></math></td></tr>
+    <tr><td>U+23B4</td><td>top square bracket</td><td>&#x23B4;</td><td><math><mover><mi>x</mi><mo>&#x23B4;</mo></mover><mo>,</mo><mover><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x23B4;</mo></mover></math></td></tr>
+    <tr><td>U+23B5</td><td>bottom square bracket</td><td>&#x23B5;</td><td><math><munder><mi>x</mi><mo>&#x23B5;</mo></munder><mo>,</mo><munder><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x23B5;</mo></munder></math></td></tr>
+    <tr><td>U+23DC</td><td>top parenthesis</td><td>&#x23DC;</td><td><math><mover><mi>x</mi><mo>&#x23DC;</mo></mover><mo>,</mo><mover><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x23DC;</mo></mover></math></td></tr>
+    <tr><td>U+23DD</td><td>bottom parenthesis</td><td>&#x23DD;</td><td><math><munder><mi>x</mi><mo>&#x23DD;</mo></munder><mo>,</mo><munder><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x23DD;</mo></munder></math></td></tr>
+    <tr><td>U+23DE</td><td>top curly bracket</td><td>&#x23DE;</td><td><math><mover><mi>x</mi><mo>&#x23DE;</mo></mover><mo>,</mo><mover><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x23DE;</mo></mover></math></td></tr>
+    <tr><td>U+23DF</td><td>bottom curly bracket</td><td>&#x23DF;</td><td><math><munder><mi>x</mi><mo>&#x23DF;</mo></munder><mo>,</mo><munder><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x23DF;</mo></munder></math></td></tr>
+  </tbody>
+</table>
+
+  <script>
+    // Replicate the existing 4th cell in each tbody row across all font columns
+    // using the class names from the thead. Keeps first three columns unchanged.
+    document.addEventListener('DOMContentLoaded', function () {
+      const table = document.querySelector('table');
+      if (!table) return;
+      const ths = Array.from(table.querySelectorAll('thead th'));
+      // take classes from the 4th header onward
+      const classes = ths.slice(3).map(th => th.className || '');
+
+      const rows = Array.from(table.querySelectorAll('tbody tr'));
+      rows.forEach(row => {
+        const cells = Array.from(row.querySelectorAll('td'));
+        // if there are fewer than 4 cells, skip
+        if (cells.length < 4) return;
+        // content to replicate - assume the 4th cell holds the sample
+        const templateHTML = cells[3].innerHTML;
+
+        // remove any cells from index 3 onward (we'll recreate them)
+        for (let i = cells.length - 1; i >= 3; i--) {
+          cells[i].remove();
+        }
+
+        // append a td for each header class (in order)
+        classes.forEach(cls => {
+          const td = document.createElement('td');
+          if (cls) td.className = cls;
+          td.innerHTML = templateHTML;
+          row.appendChild(td);
+        });
       });
-    </script>
-   </head>
-  <body>
+    });
+  </script>
 
-    <h1>Mathematical OpenType Fonts</h1>
-
-    <p>This <a href="https://github.com/fred-wang/MathFonts">GitHub repository</a> provides various style sheets for mathematical fonts, together with Web fonts for those under an open source license.</p>
-
-    <p id="testcase_general">Please select how you want to render this page:</p>
-    <ul>
-      <li>Use <select class="mathfont"></select></li>
-      <li>Only set font for MathML
-        <input id="CheckBox" type="checkbox" class="mathmlonly"/></li>
-    </ul>
-
-    <p>Alternatively, you can try the
-      <a href="./mozilla_mathml_test/">Mozilla test</a> or this
-      <a href="Συνάρτηση_ζήτα_Ρήμαν.html">Greek page using the GFS
-        NeoHellenic font</a>.</p>
-
-    <p>This is a simple paragraph of text with some simple inline expressions
-      such as
-      <math><semantics><mrow><msqrt><mn>2</mn></msqrt><mo>+</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><annotation encoding="TeX">\sqrt{2} + x_1</annotation></semantics></math>,
-      <math><semantics><mfrac><msup><mi>π</mi><mn>8</mn></msup><mn>2</mn></mfrac><annotation encoding="TeX">\frac{\pi^8}{2}</annotation></semantics></math>, <math><semantics><mroot><msup><mi>ℒ</mi><mo>′</mo></msup><mi>n</mi></mroot><annotation encoding="TeX">\sqrt[n]{\mathscr L'}</annotation></semantics></math> or
-      <math><semantics><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mover><mi>f</mi><mo stretchy="false">^</mo></mover><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow><annotation encoding="TeX">\sum_{i=1}^n \hat{f}(i)</annotation></semantics></math>.
-Some fonts support old style numbers <span class="oldstylenumbers">0123456789</span> (vs 0123456789) or calligraphic
-letters <math><semantics><mi class="calligraphic">𝒜</mi><annotation encoding="TeX">\mathcal{A}</annotation></semantics></math> (vs <math><semantics><mi>𝒜</mi><annotation encoding="TeX">\mathscr{A}</annotation></semantics></math>).</p>
-
-<p>Here are some display expressions:
-
-<math display="block"><semantics><mrow><mover><mi>𝐄</mi><mo stretchy="false">⇀</mo></mover><mo>=</mo><mrow><mo>{</mo><mtable rowspacing="0.5ex" columnalign="left left" displaystyle="false"><mtr><mtd><mn>0</mn><mover><mi>𝐤</mi><mo stretchy="false">^</mo></mover><mo>,</mo></mtd><mtd><mi>z</mi><mo>&gt;</mo><mi>d</mi><mo>/</mo><mn>2</mn></mtd></mtr><mtr><mtd><mo>−</mo><mfrac><mi>σ</mi><mrow><mn>2</mn><msub><mi>ε</mi><mn>0</mn></msub></mrow></mfrac><mover><mi>𝐤</mi><mo stretchy="false">^</mo></mover><mo>,</mo></mtd><mtd><mi>d</mi><mo>/</mo><mn>2</mn><mo>&gt;</mo><mi>z</mi><mo>&gt;</mo><mo>−</mo><mi>d</mi><mo>/</mo><mn>2</mn></mtd></mtr><mtr><mtd><mn>0</mn><mover><mi>𝐤</mi><mo stretchy="false">^</mo></mover><mo>,</mo></mtd><mtd><mi>z</mi><mo>&lt;</mo><mo>−</mo><mi>d</mi><mo>/</mo><mn>2</mn></mtd></mtr><mtr><mtd></mtd></mtr></mtable><undefined></undefined></mrow></mrow><annotation encoding="TeX">\vec{\mathbf{E}} =
-          \left\{
-          \begin{array}{l l}
-          0 \hat{\mathbf{k}}, &amp; z &gt; d/2 \\
-          -\frac{σ}{2ε_0} \hat{\mathbf{k}},  &amp; d/2 &gt; z &gt; -d / 2 \\
-          0 \hat{\mathbf{k}}, &amp; z &lt; -d/2 \\
-          \end{array}
-          \right.</annotation></semantics></math>
-
-<math display="block"><semantics><mrow><msubsup><mo>∫</mo><mrow><mo>−</mo><mn>∞</mn></mrow><mrow><mo>+</mo><mn>∞</mn></mrow></msubsup><mfrac><mrow><mn>16</mn><mo lspace="0em" rspace="0em">sin</mo><mo stretchy="false">(</mo><mn>2</mn><mi>x</mi><mo>+</mo><mi>π</mi><mo stretchy="false">)</mo></mrow><mrow><mn>5</mn><mo stretchy="false">(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn><mi>x</mi><mo>+</mo><mn>5</mn><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow></mfrac><mi>d</mi><mi>x</mi><mo>=</mo><mfrac><mrow><mi>π</mi><mo lspace="0em" rspace="0em">sin</mo><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><msup><mi>e</mi><mn>4</mn></msup></mfrac></mrow><annotation encoding="TeX">\int_{-\infty}^{+\infty}\frac{16\sin(2x+\pi)}{5(x^{2}+2x+5)^{2}}dx=\frac{\pi
-\sin(2)}{e^{4}}</annotation></semantics></math>
-
-followed by inline expressions like <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mroot><mfrac><mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>+</mo><mi>z</mi></mrow><mrow><msubsup><mi>α</mi><mn>2</mn><mn>1</mn></msubsup><mo>−</mo><msub><mi>β</mi><mn>0</mn></msub><mo>−</mo><mfrac><msqrt><mi>ζ</mi></msqrt><mn>3</mn></mfrac></mrow></mfrac><mi>p</mi></mroot><annotation encoding="TeX">\sqrt[p]{\frac{x+y+z}{\alpha^1_2 - \beta_0 - \frac{\sqrt{\zeta}}3}}</annotation></semantics></math> or <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi>𝔤</mi><mi>𝔩</mi></mrow><mo stretchy="false">(</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow><annotation encoding="TeX">\mathfrak{gl}(\mathbb{R})</annotation></semantics></math>. More display expressions:
-
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable columnalign="right left right left right left right left right left" columnspacing="0em" displaystyle="true"><mtr><mtd><mi>V</mi><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mtd><mtd><mo>=</mo><msubsup><mo>∫</mo><mrow><mi>φ</mi><mo>=</mo><mn>0</mn></mrow><mrow><mn>2</mn><mi>π</mi></mrow></msubsup><msubsup><mo>∫</mo><mrow><mi>θ</mi><mo>=</mo><mn>0</mn></mrow><mi>π</mi></msubsup><msubsup><mo>∫</mo><mrow><mi>r</mi><mo>=</mo><mn>0</mn></mrow><mi>R</mi></msubsup><msup><mi>r</mi><mn>2</mn></msup><mo lspace="0em" rspace="0em">sin</mo><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo><mi>d</mi><mi>r</mi><mi>d</mi><mi>θ</mi><mi>d</mi><mi>φ</mi></mtd></mtr><mtr><mtd></mtd><mtd><mo>=</mo><mrow><mo>(</mo><mrow><msubsup><mo>∫</mo><mrow><mi>φ</mi><mo>=</mo><mn>0</mn></mrow><mrow><mn>2</mn><mi>π</mi></mrow></msubsup><mi>d</mi><mi>φ</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><msubsup><mo>∫</mo><mrow><mi>θ</mi><mo>=</mo><mn>0</mn></mrow><mi>π</mi></msubsup><mo lspace="0em" rspace="0em">sin</mo><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo><mi>d</mi><mi>θ</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><msubsup><mo>∫</mo><mrow><mi>r</mi><mo>=</mo><mn>0</mn></mrow><mi>R</mi></msubsup><msup><mi>r</mi><mn>2</mn></msup><mi>d</mi><mi>r</mi></mrow><mo>)</mo></mrow></mtd></mtr><mtr><mtd></mtd><mtd><mo>=</mo><msubsup><mrow><mo>[</mo><mi>φ</mi><mo>]</mo></mrow><mrow><mi>φ</mi><mo>=</mo><mn>0</mn></mrow><mrow><mn>2</mn><mi>π</mi></mrow></msubsup><msubsup><mrow><mo>[</mo><mrow><mo>−</mo><mo lspace="0em" rspace="0em">cos</mo><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><mo>]</mo></mrow><mrow><mi>θ</mi><mo>=</mo><mn>0</mn></mrow><mi>π</mi></msubsup><msubsup><mrow><mo>[</mo><mfrac><msup><mi>r</mi><mn>3</mn></msup><mn>3</mn></mfrac><mo>]</mo></mrow><mrow><mi>r</mi><mo>=</mo><mn>0</mn></mrow><mi>R</mi></msubsup></mtd></mtr><mtr><mtd></mtd><mtd><mo>=</mo><mfrac><mn>4</mn><mn>3</mn></mfrac><mi>π</mi><msup><mi>R</mi><mn>3</mn></msup></mtd></mtr></mtable><annotation encoding="TeX">
-      \begin{aligned}
-      V(R) &amp;=
-      \int_{\varphi=0}^{2 \pi}
-      \int_{\theta=0}^{\pi}
-      \int_{r=0}^{R}
-      r^2 \sin(\theta) dr d\theta d\varphi \\ &amp;=
-      \left( \int_{\varphi=0}^{2 \pi}  d\varphi \right)
-      \left( \int_{\theta=0}^{\pi} \sin(\theta)  d\theta \right)
-      \left( \int_{r=0}^{R} r^2 dr \right) \\ &amp;=
-      \left[   \varphi \right]_{\varphi=0}^{2 \pi}
-      \left[  -\cos(\theta) \right]_{\theta=0}^{\pi}
-      \left[ \frac{r^3}{3} \right]_{r=0}^{R} \\ &amp;=
-      \frac{4}{3} \pi R^3
-      \end{aligned}
-    </annotation></semantics></math>
-
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo lspace="0em" rspace="0em">det</mo><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo><mo>=</mo><munder><mo>∑</mo><mrow><mi>σ</mi><mo>∊</mo><msub><mi>S</mi><mi>n</mi></msub></mrow></munder><mi>ϵ</mi><mo stretchy="false">(</mo><mi>σ</mi><mo stretchy="false">)</mo><munderover><mo>∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>a</mi><mrow><mi>i</mi><mo>,</mo><mi>σ</mi><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msub></mrow><annotation encoding="TeX">\det(A) = \sum_{\sigma \in S_n} \epsilon(\sigma) \prod_{i=1}^n a_{i,\sigma(i)}</annotation></semantics></math>
-
-    <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>n</mi></msub><mo>=</mo><msub><mn>𝟙</mn><mi>n</mi></msub><mo>=</mo><mrow><mo>(</mo><mtable rowspacing="0.5ex" displaystyle="false"><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mo>…</mo></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mo>…</mo></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mo>⋱</mo></mtd><mtd></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mo>⋮</mo></mtd><mtd></mtd><mtd></mtd><mtd></mtd><mtd><mo>⋮</mo></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mo>…</mo></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><annotation encoding="TeX">I_n = \mathbb{1}_n =
-    \begin{pmatrix}
-    1 &amp; 0 &amp; 0     &amp; \dots &amp; 0 \\
-    0 &amp; 1 &amp; 0     &amp; \dots &amp; 0 \\
-    0 &amp; 0 &amp; \ddots &amp;      &amp; 0 \\
-    \vdots &amp;   &amp;   &amp;     &amp; \vdots \\
-    0 &amp;  0      &amp; \dots  &amp;  0   &amp; 1
-    \end{pmatrix}
-    </annotation></semantics></math>
-
-    </p>
-
-    <p id="testcase_individual">To go further, you can check available data for each font:</p>
-    <ul id="font_data">
-    </ul>
-
-  </body>
+</body>
 </html>
