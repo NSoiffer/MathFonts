@@ -19,12 +19,14 @@
       vertical-align: middle;
     }
 
+    td { white-space: nowrap;}
+
     td.LeteSansMath {
-      max-width: 6em;
+      max-width: 5em;
       overflow: hidden;
       text-overflow: ellipsis;
-      white-space: nowrap;
     }
+
 
     /* It is necessary to override the user agent stylesheet's setting of 'math-font-family' for the math element */
     .Asana, .Asana math         { font-family: 'Asana Math'; }
