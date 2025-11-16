@@ -77,6 +77,12 @@
 </head>
 <body>
   <h1>Unicode-Math Accents Table</h1>
+
+  <details id="fontselector">
+    <summary><b>Font Column Selection</b></summary>
+  </details>
+
+  <h3>Table of Accents</h3>
   <table>
     <thead>
       <tr>
@@ -182,9 +188,37 @@
           if (cls) td.className = cls;
           td.innerHTML = templateHTML;
           row.appendChild(td);
-        });
+        });						
       });
+        const fontsel=document.getElementById("fontselector");
+                classes.forEach(cls => {
+		    const sp = document.createElement('span');
+		    const t = document.createTextNode(' ');
+		    sp.style.whiteSpace="nowrap";
+		    const inp = document.createElement('input');
+		    inp.type="checkbox";
+		    inp.id="select"+cls;
+		    inp.checked=true;
+		    inp.setAttribute("onChange","showColumn(this)");
+		    const lb = document.createElement('label');
+		    lb.textContent=cls + "   ";
+                    lb.setAttribute("for","select"+cls);
+		    sp.appendChild(inp);
+		    sp.appendChild(lb);
+		    fontsel.appendChild(sp);
+		    fontsel.appendChild(t);
+		});
     });
+    function showColumn(n) {
+	const c=n.id.replace('select','*.');
+	if(n.checked) {
+	    Array.from(document.querySelectorAll(c)).forEach(cell=> {
+                cell.style.display='table-cell';
+})} else {
+	    Array.from(document.querySelectorAll(c)).forEach(cell=> {
+                cell.style.display='none';
+	    })}	    
+    }
   </script>
 
 </body>
