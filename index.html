@@ -192,21 +192,32 @@
       });
         const fontsel=document.getElementById("fontselector");
                 classes.forEach(cls => {
+		    const sp = document.createElement('span');
+		    const t = document.createTextNode(' ');
+		    sp.style.whiteSpace="nowrap";
 		    const inp = document.createElement('input');
 		    inp.type="checkbox";
 		    inp.id="select"+cls;
 		    inp.checked=true;
 		    inp.setAttribute("onChange","showColumn(this)");
 		    const lb = document.createElement('label');
-		    lb.textContent=cls + " ";
+		    lb.textContent=cls + "   ";
                     lb.setAttribute("for","select"+cls);
-		    fontsel.appendChild(inp);
-		    fontsel.appendChild(lb);
+		    sp.appendChild(inp);
+		    sp.appendChild(lb);
+		    fontsel.appendChild(sp);
+		    fontsel.appendChild(t);
 		});
     });
     function showColumn(n) {
+	const c=n.id.replace('select','*.');
 	if(n.checked) {
-	    
+	    Array.from(document.querySelectorAll(c)).forEach(cell=> {
+                cell.style.display='table-cell';
+})} else {
+	    Array.from(document.querySelectorAll(c)).forEach(cell=> {
+                cell.style.display='none';
+	    })}	    
     }
   </script>
 
