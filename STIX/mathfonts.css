@@ -13,37 +13,27 @@ http://downloads.sourceforge.net/project/stixfonts/
 
 @font-face {
     font-family: STIX Two Text;
-    src: local('STIXTwoText'),
-         url('STIXTwoText-Regular.woff2'),
-         url('STIXTwoText-Regular.woff');
+    src: url('STIXTwoText-Regular.woff2');
 }
 @font-face {
     font-family: STIX Two Text;
-    src: local('STIXTwoText-Bold'),
-         url('STIXTwoText-Bold.woff2'),
-         url('STIXTwoText-Bold.woff');
+    src: url('STIXTwoText-Bold.woff2');
     font-weight: bold;
 }
 @font-face {
     font-family: STIX Two Text;
-    src: local('STIXTwoText-Italic'),
-         url('STIXTwoText-Italic.woff2'),
-         url('STIXTwoText-Italic.woff');
+    src: url('STIXTwoText-Italic.woff2');
     font-style: italic;
 }
 @font-face {
     font-family: STIX Two Text;
-    src: local('STIXTwoText-BoldItalic'),
-         url('STIXTwoText-BoldItalic.woff2'),
-         url('STIXTwoText-BoldItalic.woff');
+    src: url('STIXTwoText-BoldItalic.woff2');
     font-weight: bold;
     font-style: italic;
 }
 @font-face {
     font-family: STIX Two Math;
-    src: local('STIXTwoMath-Regular'),
-         url('STIXTwoMath-Regular.woff2'),
-         url('STIXTwoMath-Regular.woff');
+    src: url('STIXTwoMath-Regular.woff2');
 }
 
 .oldstylenumbers {
