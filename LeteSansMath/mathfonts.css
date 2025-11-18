@@ -13,8 +13,7 @@ converted to WOFF.
 
 @font-face {
     font-family: Lete Sans Math;
-    src: local('Lete Sans Math'), local('Lete-Sans-Math'),
-         url('LeteSansMath.woff2'), url('LeteSansMath.woff');
+    src:          url('LeteSansMath.woff2');
 }
 
 .oldstylenumbers {
