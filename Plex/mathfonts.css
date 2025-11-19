@@ -9,35 +9,26 @@ or package managers.
 
 @font-face {
     font-family: IBMPlexMath;
-    src: local('IBMPlexMath-Regular'),
-         url('IBMPlexMath-Regular.woff2'), url('IBMPlexMath-Regular.woff');
+    src: url('IBMPlexMath-Regular.woff2');
 }
 
 @font-face {
     font-family: "IBMPlexSerif";
-    src: local('IBMPlexSerif-Regular'),
-         url('IBMPlexSerif-Regular.woff2'),
-         url('IBMPlexSerif-Regular.woff');
+    src: url('IBMPlexSerif-Regular.woff2');
 }
 @font-face {
     font-family: "IBMPlexSerif";
-    src: local('IBMPlexSerif-Bold'),
-         url('IBMPlexSerif-Bold.woff2'),
-         url('IBMPlexSerif-Bold.woff');
+    src: url('IBMPlexSerif-Bold.woff2');
     font-weight: bold;
 }
 @font-face {
     font-family: "IBMPlexSerif";
-    src: local('IBMPlexSerif-Italic'),
-         url('IBMPlexSerif-Italic.woff2'),
-         url('IBMPlexSerif-Italic.woff');
+    src: url('IBMPlexSerif-Italic.woff2');
     font-style: italic;
 }
 @font-face {
     font-family: "IBMPlexSerif";
-    src: local('IBMPlexSerif-BoldItalic'),
-         url('IBMPlexSerif-BoldItalic.woff2'),
-         url('IBMPlexSerif-BoldItalic.woff');
+    src: url('IBMPlexSerif-BoldItalic.woff2');
     font-weight: bold;
     font-style: italic;
 }
