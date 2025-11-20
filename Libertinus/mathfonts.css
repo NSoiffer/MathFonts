@@ -37,9 +37,7 @@ the files in this directory for details.
 }
 @font-face {
     font-family: Libertinus Math;
-    src: local('Libertinus Math'), local('LibertinusMath'),
-         url('libertinusmath-regular.woff2'),
-         url('libertinusmath-regular.woff');
+    src: url('libertinusmath-regular.woff2');
 }
 
 .oldstylenumbers {

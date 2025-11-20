@@ -3,15 +3,71 @@
 <head>
   <meta charset="utf-8">
   <title>Unicode-Math Accents Table</title>
-  <style>
+
+<script>
+const mathfont_list = {
+    "Default":  "Default fonts (local only)",
+    "STIX": "STIX Two Math",
+    "NewComputerModern": "New Computer Modern Math",
+    "NewComputerModernSans": "New Computer Modern Sans Math",
+    "LatinModern": "Latin Modern Math",
+    "Cambria": "Cambria (local only)",
+    "Asana": "Asana Math",
+    "DejaVu": "DejaVu Math TeX Gyre",
+    "FiraMath": "Fira Math",
+    "Garamond": "Garamond Math",
+    "GFS_NeoHellenic": "GFS NeoHellenic Math",
+    "LeteSansMath": "Lete Sans Math",
+    "Libertinus": "Libertinus Math",
+    "LucidaBright": "Lucida Bright (local only)",
+    "Minion": "Minion (local only)",
+    "TeXGyreBonum": "TeX Gyre Bonum Math",
+    "TeXGyrePagella": "TeX Gyre Pagella Math",
+    "TeXGyreSchola": "TeX Gyre Schola Math",
+    "TeXGyreTermes": "TeX Gyre Termes Math",
+    "XITS": "XITS Math",
+    "NotoSans": "Noto Sans Math",
+    "ArsenalSans": "Arsenal Sans Math",
+    "Plex": "IBM Plex Math",
+};
+
+
+let basecss="https://nsoiffer.github.io/MathFonts/";
+if(document.location.href.includes("MathFonts")) {
+    basecss="";
+}
+document.addEventListener("DOMContentLoaded", () => {
+
+    let sty = document.createElement("style");
+    for (let value in mathfont_list) {
+	if(value != "Default" ){
+	    sty.textContent+=`\n .${value}, .${value} math \
+          { font-family: '${mathfont_list[value].replace(' (local only)','')}'; }`;
+	    let mathfont_link = document.createElement("link");
+	    mathfont_link.setAttribute("rel", "stylesheet");
+	    mathfont_link.setAttribute("type", "text/css");
+	    mathfont_link.setAttribute("href", basecss + value + "/mathfonts.css");
+	    document.head.appendChild(mathfont_link);
+
+	}
+    }
+    document.head.appendChild(sty);
+});
+</script>
+
+<style>
     table {
       border-collapse: collapse;
       width: 100%;
       font-size: 14pt;
     }
     th {
-      font-size: 10pt;
+	font-size: 10pt;
+	background-color:white;
     }
+
+    thead {position:sticky;top:0;}
+    
     th, td {
       border: 1px solid #ccc;
       padding: 6px 10px;
@@ -25,54 +81,7 @@
     .duplicate {
       background-color: #fffacd;
     }
-
-    /* It is necessary to override the user agent stylesheet's setting of 'math-font-family' for the math element */
-    .Asana, .Asana math         { font-family: 'Asana Math'; }
-    .Cambria, .Cambria math     { font-family: 'Cambria Math'; }
-    .DejaVu, .DejaVu math       { font-family: 'DejaVu Math TeX Gyre'; }
-    .FiraMath, .FiraMath math   { font-family: 'Fira Math'; }
-    .Garamond, .Garamond math   { font-family: 'Garamond Math'; }
-    .GFS_NeoHellenic, .GFS_NeoHellenic math { font-family: 'GFS Neohellenic Math'; }
-    .LatinModern, .LatinModern math { font-family: 'Latin Modern Math'; }
-    .LeteSansMath, .LeteSansMath math { font-family: 'Lete Sans Math'; }
-    .Libertinus, .Libertinus math { font-family: 'Libertinus Math'; }
-    .LucidaBright, .LucidaBright math { font-family: 'Lucida Bright Math'; }
-    .NewComputerModern, .NewComputerModern math { font-family: 'NewComputerModernMath'; }
-    .NewComputerModernSans, .NewComputerModernSans math { font-family: 'NewComputerModernSansMath'; }
-    .Minion, .Minion math       { font-family: 'Minion Math'; }
-    .STIX, .STIX math           { font-family: 'STIX Two Math'; }
-    .TeXGyreBonum, .TeXGyreBonum math { font-family: 'TeX Gyre Bonum Math'; }
-    .TeXGyrePagella, .TeXGyrePagella math { font-family: 'TeX Gyre Pagella Math'; }
-    .TeXGyreSchola, .TeXGyreSchola math { font-family: 'TeX Gyre Schola Math'; }
-    .TeXGyreTermes, .TeXGyreTermes math { font-family: 'TeX Gyre Termes Math'; }
-    .XITS, .XITS math           { font-family: 'XITS Math'; }
-    .NotoSans, .NotoSans math           { font-family: 'Noto Sans Math'; }
-    .ArsenalSans, .ArsenalSans math           { font-family: 'Arsenal Sans Math'; }
-    .Plex, .Plex math           { font-family: 'IBMPlexMath'; }
-
 </style>
-
-  <!-- Load provider stylesheets for math fonts -->
-  <link rel="stylesheet" type="text/css" href="https://nsoiffer.github.io/MathFonts/Asana/mathfonts.css">
-  <link rel="stylesheet" type="text/css" href="https://nsoiffer.github.io/MathFonts/DejaVu/mathfonts.css">
-  <link rel="stylesheet" type="text/css" href="https://nsoiffer.github.io/MathFonts/FiraMath/mathfonts.css">
-  <link rel="stylesheet" type="text/css" href="https://nsoiffer.github.io/MathFonts/Garamond/mathfonts.css">
-  <link rel="stylesheet" type="text/css" href="https://nsoiffer.github.io/MathFonts/GFS_NeoHellenic/mathfonts.css">
-  <link rel="stylesheet" type="text/css" href="https://nsoiffer.github.io/MathFonts/LatinModern/mathfonts.css">
-  <link rel="stylesheet" type="text/css" href="https://nsoiffer.github.io/MathFonts/LeteSansMath/mathfonts.css">
-  <link rel="stylesheet" type="text/css" href="https://nsoiffer.github.io/MathFonts/Libertinus/mathfonts.css">
-  <link rel="stylesheet" type="text/css" href="https://nsoiffer.github.io/MathFonts/NewComputerModern/mathfonts.css">
-  <link rel="stylesheet" type="text/css" href="https://nsoiffer.github.io/MathFonts/NewComputerModernSans/mathfonts.css">
-  <link rel="stylesheet" type="text/css" href="https://nsoiffer.github.io/MathFonts/STIX/mathfonts.css">
-  <link rel="stylesheet" type="text/css" href="https://nsoiffer.github.io/MathFonts/TeXGyreBonum/mathfonts.css">
-  <link rel="stylesheet" type="text/css" href="https://nsoiffer.github.io/MathFonts/TeXGyrePagella/mathfonts.css">
-  <link rel="stylesheet" type="text/css" href="https://nsoiffer.github.io/MathFonts/TeXGyreSchola/mathfonts.css">
-  <link rel="stylesheet" type="text/css" href="https://nsoiffer.github.io/MathFonts/TeXGyreTermes/mathfonts.css">
-  <link rel="stylesheet" type="text/css" href="https://nsoiffer.github.io/MathFonts/XITS/mathfonts.css">
-  <link rel="stylesheet" type="text/css" href="https://nsoiffer.github.io/MathFonts/NotoSans/mathfonts.css">
-  <link rel="stylesheet" type="text/css" href="https://nsoiffer.github.io/MathFonts/ArsenalSans/mathfonts.css">
-  <link rel="stylesheet" type="text/css" href="https://nsoiffer.github.io/MathFonts/Plex/mathfonts.css">
-
 </head>
 <body>
   <h1>Unicode-Math Accents Table</h1>
@@ -84,32 +93,10 @@
   <h3>Table of Accents</h3>
   <table>
     <thead>
-      <tr>
+      <tr id="hdtr">
         <th>Unicode</th>
         <th>Description</th>
         <th>Glyph</th>
-        <th class="STIX">STIX2</th>
-        <th class="NewComputerModern">New Computer Modern</th>
-        <th class="NewComputerModernSans">New Computer Modern Sans</th>
-        <th class="LatinModern">Latin Modern</th>
-        <th class="Cambria">Cambria (local only)</th>
-        <th class="Asana">Asana</th>
-        <th class="DejaVu">DejaVu</th>
-        <th class="FiraMath">FiraMath</th>
-        <th class="Garamond">Garamond</th>
-        <th class="GFS_NeoHellenic">GFS NeoHellenic</th>
-        <th class="LeteSansMath">Lete Sans Math</th>
-        <th class="Libertinus">Libertinus</th>
-        <th class="LucidaBright">Lucida Bright (local only)</th>
-        <th class="Minion">Minion (local only)</th>
-        <th class="TeXGyreBonum">TeX Gyre Bonum</th>
-        <th class="TeXGyrePagella">TeX Gyre Pagella</th>
-        <th class="TeXGyreSchola">TeX Gyre Schola</th>
-        <th class="TeXGyreTermes">TeX Gyre Termes</th>
-        <th class="XITS">XITS</th>
-        <th class="NotoSans">Noto Sans</th>
-        <th class="ArsenalSans">Arsenal Sans</th>
-        <th class="Plex">IBMPlex Sans</th>
       </tr>
     </thead>
   <tbody>
@@ -164,12 +151,19 @@
     // Replicate the existing 4th cell in each tbody row across all font columns
     // using the class names from the thead. Keeps first three columns unchanged.
     document.addEventListener('DOMContentLoaded', function () {
-      const table = document.querySelector('table');
-      if (!table) return;
-      const ths = Array.from(table.querySelectorAll('thead th'));
-      // take classes from the 4th header onward
-      const classes = ths.slice(3).map(th => th.className || '');
+	const table = document.querySelector('table');
 
+      if (!table) return;
+      const hdtr = document.getElementById('hdtr');
+
+
+      for (let value in mathfont_list) {
+	       let th = document.createElement("th");
+	     th.setAttribute("class",value);
+th.textContent=mathfont_list[value];
+hdtr.appendChild(th);
+      }
+  
       const rows = Array.from(table.querySelectorAll('tbody tr'));
       rows.forEach(row => {
         const cells = Array.from(row.querySelectorAll('td'));
@@ -184,31 +178,31 @@
         }
 
         // append a td for each header class (in order)
-        classes.forEach(cls => {
+     for (let value in mathfont_list) {
           const td = document.createElement('td');
-          if (cls) td.className = cls;
+          td.className = value;
           td.innerHTML = templateHTML;
           row.appendChild(td);
-        });						
+        };						
       });
         const fontsel=document.getElementById("fontselector");
-                classes.forEach(cls => {
+     for (let value in mathfont_list) {
 		    const sp = document.createElement('span');
 		    const t = document.createTextNode(' ');
 		    sp.style.whiteSpace="nowrap";
 		    const inp = document.createElement('input');
 		    inp.type="checkbox";
-		    inp.id="select"+cls;
+		    inp.id="select"+value;
 		    inp.checked=true;
 		    inp.setAttribute("onChange","showColumn(this)");
 		    const lb = document.createElement('label');
-		    lb.textContent=cls + "   ";
-                    lb.setAttribute("for","select"+cls);
+		    lb.textContent=value + "   ";
+                    lb.setAttribute("for","select"+value);
 		    sp.appendChild(inp);
 		    sp.appendChild(lb);
 		    fontsel.appendChild(sp);
 		    fontsel.appendChild(t);
-		});
+		}
     });
     function showColumn(n) {
 	const c=n.id.replace('select','*.');

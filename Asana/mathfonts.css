@@ -13,8 +13,7 @@ http://mirrors.ctan.org/fonts/
 
 @font-face {
     font-family: Asana Math;
-    src: local('Asana Math'), local('Asana-Math'),
-         url('Asana-Math.woff2'), url('Asana-Math.woff');
+    src:  url('Asana-Math.woff2');
 }
 
 .oldstylenumbers {

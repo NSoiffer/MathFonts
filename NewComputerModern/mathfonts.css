@@ -11,9 +11,8 @@ to woff.
 @namespace m url('http://www.w3.org/1998/Math/MathML');
 
 @font-face {
-    font-family: NewComputerModernMath;
-    src: local('NewComputerModernMath'),
-         url('NewCMMath-Book.woff2'), url('NewCMMath-Book.woff');
+    font-family: New Computer Modern Math;
+    src: url('NewCMMath-Book.woff2');
 }
 
 @font-face {
