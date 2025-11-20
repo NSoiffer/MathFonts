@@ -1,24 +1,27 @@
 const mathfont_list = {
     "Default":  "Default fonts (local only)",
-    "Asana": "Asana",
+    "STIX": "STIX Two Math",
+    "NewComputerModern": "New Computer Modern Math",
+    "NewComputerModernSans": "New Computer Modern Sans Math",
+    "LatinModern": "Latin Modern Math",
     "Cambria": "Cambria (local only)",
-    "DejaVu": "DejaVu",
-    "FiraMath": "FiraMath",
-    "Garamond": "Garamond",
-    "GFS_NeoHellenic": "GFS NeoHellenic",
-    "LatinModern": "Latin Modern",
+    "Asana": "Asana Math",
+    "DejaVu": "DejaVu Math TeX Gyre",
+    "FiraMath": "Fira Math",
+    "Garamond": "Garamond Math",
+    "GFS_NeoHellenic": "GFS NeoHellenic Math",
     "LeteSansMath": "Lete Sans Math",
-    "Libertinus": "Libertinus",
+    "Libertinus": "Libertinus Math",
     "LucidaBright": "Lucida Bright (local only)",
-    "NewComputerModern": "New Computer Modern",
-    "NewComputerModernSans": "New Computer Modern Sans",
     "Minion": "Minion (local only)",
-    "STIX": "STIX",
-    "TeXGyreBonum": "TeX Gyre Bonum",
-    "TeXGyrePagella": "TeX Gyre Pagella",
-    "TeXGyreSchola": "TeX Gyre Schola",
-    "TeXGyreTermes": "TeX Gyre Termes",
-    "XITS": "XITS",
+    "TeXGyreBonum": "TeX Gyre Bonum Math",
+    "TeXGyrePagella": "TeX Gyre Pagella Math",
+    "TeXGyreSchola": "TeX Gyre Schola Math",
+    "TeXGyreTermes": "TeX Gyre Termes Math",
+    "XITS": "XITS Math",
+    "NotoSans": "Noto Sans Math",
+    "ArsenalSans": "Arsenal Sans Math",
+    "Plex": "IBM Plex Math",
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -61,9 +64,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 mathfont_link.removeAttribute("href");
             else
                 mathfont_link.setAttribute("href",
-                                           `/MathFonts/${mathfont}/mathfonts.css`);
+                                           `./${mathfont}/mathfonts.css`);
+	document.getElementById("mathcss").innerHTML=
+       ".htmlmathparagraph, mtext {font-family: " + mathfont_list[mathfont] + ";}\n"
+   + "math {font-family: " + mathfont_list[mathfont] + ";}";
             updateQueryStrings();
         }
+
         for (let value in mathfont_list) {
             let option = document.createElement("option");
             option.value = value;
