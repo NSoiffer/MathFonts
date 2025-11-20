@@ -37,8 +37,6 @@ files in this directory for details.
 }
 @font-face {
     font-family: GFS Neohellenic Math;
-    src: local('GFSNeohellenicMath'),
-         url('GFSNeohellenicMath.woff2'),
-         url('GFSNeohellenicMath.woff');
+    src: url('GFSNeohellenicMath.woff2');
 }
 

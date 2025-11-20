@@ -22,8 +22,6 @@ in this directory for details.
 }
 @font-face {
     font-family: Garamond Math;
-    src: local('Garamond-Math'),
-         url('Garamond-Math.woff2'),
-         url('Garamond-Math.woff');
+    src: url('Garamond-Math.woff2');
 }
 

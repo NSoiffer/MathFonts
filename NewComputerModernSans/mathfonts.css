@@ -11,12 +11,11 @@ to woff.
 @namespace m url('http://www.w3.org/1998/Math/MathML');
 
 @font-face {
-    font-family: NewComputerModernSansMath;
-    src: local('NewComputerModernSansMath'), local('NewComputerModernSansMath'),
-         url('NewCMSansMath-Regular.woff2'), url('NewCMSansMath-Regular.woff');
+    font-family: New Computer Modern Sans Math;
+    src:  url('NewCMSansMath-Regular.woff2');
 }
 
-@font-feature-values NewComputerModernSansMath { @stylistic { calligraphic: 1; } }
+@font-feature-values New Computer Modern Sans Math { @stylistic { calligraphic: 1; } }
 m|*.calligraphic {
     font-variant-alternates: stylistic(calligraphic); /* Recommended syntax */
     font-feature-settings: 'ss01';         /* OpenType feature syntax */

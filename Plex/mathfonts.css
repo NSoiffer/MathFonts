@@ -8,7 +8,7 @@ or package managers.
 @namespace m url('http://www.w3.org/1998/Math/MathML');
 
 @font-face {
-    font-family: IBMPlexMath;
+    font-family: IBM Plex Math;
     src: url('IBMPlexMath-Regular.woff2');
 }
 
