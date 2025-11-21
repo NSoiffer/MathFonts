@@ -23,6 +23,8 @@ const mathfont_list = {
     "ArsenalSans": "Arsenal Sans Math",
     "Plex": "IBM Plex Math",
     "Erewhon": "Erewhon Math",
+    "OldStandard": "OldStandard Math",
+    "XCharter": "XCharter Math",
 };
 
 document.addEventListener("DOMContentLoaded", () => {
