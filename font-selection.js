@@ -22,6 +22,7 @@ const mathfont_list = {
     "NotoSans": "Noto Sans Math",
     "ArsenalSans": "Arsenal Sans Math",
     "Plex": "IBM Plex Math",
+    "Erewhon": "Erewhon Math",
 };
 
 document.addEventListener("DOMContentLoaded", () => {
