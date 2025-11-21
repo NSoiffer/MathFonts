@@ -60,3 +60,7 @@
 000.956 Added symbol BLACK RIGHTWARDS ARROW
 
 000.958 Added several circle symbols
+
+000.959 Added Greek Letter Yot and Greek Capital Letter Yot
+
+000.962 Character U+0060 was not a grave accent but an apostrophe

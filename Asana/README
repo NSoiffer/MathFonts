@@ -3,7 +3,7 @@ included in the latest version of Unicode. It includes a MATH
 table, which is an extension to OpenType font technology, that 
 makes it possible to select glyphs for stretchy operators in a 
 not-so-font-specific manner. The font has been successfully tested 
-with XeTeX 0.99999 and Word 2007/2010/2016. It was constructed using 
+with XeTeX 0.99999 and Word 2007/2010/2016/2021. It was constructed using 
 glyphs from the pxfonts of Young Ryu while many symbols were designed 
 by the author. The name  Asana (Ἀσάνα, Asána) is the name of the 
 mythological goddess Athena in the Doric dialect. The font is 
@@ -19,10 +19,13 @@ is provided for people using FireFox, Word, etc. In addition, the *
 On Unix or Unix-like system, an administrtor can install either   *
 the .otf or the .TTC file in her system.                          *
 *******************************************************************
+WARNING: The .TTC file is a bit dated. I plan to update it when I *
+will get some free time.                                          *
+*******************************************************************
 
 Apostolos Syropoulos
 Xanthi, Greece
-April 14, 2019
+November 19, 2025
 
 %%%% Copyright Information %%%%%%%%%%%%
 
@@ -32,13 +35,13 @@ Full name:           Asana Math
 PostScript name:     Asana-Math
 Preferred family:    Asana Math
 Preferred subfamily: Regular
-Version:             Version 000.958 
+Version:             Version 000.962 
 Unique ID:           FontForge : Asana Math : 3-10-2007
-Copyright:           Copyright (C) 2007-2019 Apostolos Syropoulos. 
+Copyright:           Copyright (C) 2007-2025 Apostolos Syropoulos. 
 Copyright (C) 2000 Young Ryu.
 Copyright (C) 1997, 1999 Claudio Beccari.
 License URL:         http://scripts.sil.org/ofl
-License Description: Copyright (c) 2007-2019, Apostolos Syropoulos (<asyropoulos@yahoo.com),
+License Description: Copyright (c) 2007-2025, Apostolos Syropoulos (<asyropoulos@yahoo.com),
 with Reserved Font Name Asana Math.
 Copyright (c) 2000 Young Ryu,
 with Reserved Font Name pxfonts.
