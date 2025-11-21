@@ -1,56 +1,9 @@
-The "Asana Math" OpenType font includes all mathematical symbols
-included in the latest version of Unicode. It includes a MATH 
-table, which is an extension to OpenType font technology, that 
-makes it possible to select glyphs for stretchy operators in a 
-not-so-font-specific manner. The font has been successfully tested 
-with XeTeX 0.99999 and Word 2007/2010/2016/2021. It was constructed using 
-glyphs from the pxfonts of Young Ryu while many symbols were designed 
-by the author. The name  Asana (Ἀσάνα, Asána) is the name of the 
-mythological goddess Athena in the Doric dialect. The font is 
-finished (?), but it is quite possible that users may find bugs 
-and/or problems. Anyone who will find a bug or a problem, should 
-contact the author and report her findings. 
-
-*******************************************************************
-NOTE: Ideally, the font should be installed systemwide. However,  *
-the .TTC file should be installed only in Windows systems and it  *
-is provided for people using FireFox, Word, etc. In addition, the *
-.TTC file should not be included in a standard TeX installation.  *
-On Unix or Unix-like system, an administrtor can install either   *
-the .otf or the .TTC file in her system.                          *
-*******************************************************************
-WARNING: The .TTC file is a bit dated. I plan to update it when I *
-will get some free time.                                          *
-*******************************************************************
-
-Apostolos Syropoulos
-Xanthi, Greece
-November 19, 2025
-
-%%%% Copyright Information %%%%%%%%%%%%
-
-Family:              Asana Math
-Subfamily:           Regular
-Full name:           Asana Math
-PostScript name:     Asana-Math
-Preferred family:    Asana Math
-Preferred subfamily: Regular
-Version:             Version 000.962 
-Unique ID:           FontForge : Asana Math : 3-10-2007
-Copyright:           Copyright (C) 2007-2025 Apostolos Syropoulos. 
-Copyright (C) 2000 Young Ryu.
-Copyright (C) 1997, 1999 Claudio Beccari.
-License URL:         http://scripts.sil.org/ofl
-License Description: Copyright (c) 2007-2025, Apostolos Syropoulos (<asyropoulos@yahoo.com),
-with Reserved Font Name Asana Math.
-Copyright (c) 2000 Young Ryu,
-with Reserved Font Name pxfonts.
-Copyright (c) 1997, 1999 Claudio Beccari, 
-with Reserved Font Name gsmn1000.
+Copyright (c) 2024, Chenjing Bu, Daniel Flipo,
+with Reserved Font Name Lete Sans Math.
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:
-http://scripts.sil.org/OFL
+https://openfontlicense.org
 
 
 -----------------------------------------------------------
@@ -66,7 +19,7 @@ with others.
 
 The OFL allows the licensed fonts to be used, studied, modified and
 redistributed freely as long as they are not sold by themselves. The
-fonts, including any derivative works, can be bundled, embedded, 
+fonts, including any derivative works, can be bundled, embedded,
 redistributed and/or sold with any software provided that any reserved
 names are not used by derivative works. The fonts and derivatives,
 however, cannot be released under any other type of license. The
@@ -139,4 +92,3 @@ INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
 DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
 OTHER DEALINGS IN THE FONT SOFTWARE.
-Vendor ID:           PfEd
