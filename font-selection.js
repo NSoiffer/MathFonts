@@ -24,6 +24,7 @@ const mathfont_list = {
     "Plex": "IBM Plex Math",
     "Erewhon": "Erewhon Math",
     "OldStandard": "OldStandard Math",
+    "XCharter": "XCharter Math",
 };
 
 document.addEventListener("DOMContentLoaded", () => {
