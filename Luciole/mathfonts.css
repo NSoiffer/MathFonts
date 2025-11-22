@@ -41,15 +41,11 @@ converted to WOFF.
 }
 @font-face {
     font-family: Luciole Math;
-    src: local('Luciole Math'), local('Luciole-Math'),
-         url('Luciole-Math.woff2'),
-         url('Luciole-Math.woff');
+    src: url('Luciole-Math.woff2');
 }
 @font-face {
     font-family: Luciole Math;
-    src: local('Luciole Math Bold'), local('Luciole-Math-Bold'),
-         url('Luciole-Math-Bold.woff2'),
-         url('Luciole-Math-Bold.woff');
+    src: url('Luciole-Math-Bold.woff2');
     font-weight: bold;
 }
 

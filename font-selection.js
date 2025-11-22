@@ -25,8 +25,10 @@ const mathfont_list = {
     "Erewhon": "Erewhon Math",
     "OldStandard": "OldStandard Math",
     "XCharter": "XCharter Math",
-    "KpMath": "Kp Math Regular",
+    "KpMathRegular": "Kp Math Regular",
     "KpMathSans": "Kp Math Sans",
+    "Pennstander": "Pennstander Math Regular",
+    "Luciole": "Luciole Math",
 };
 
 document.addEventListener("DOMContentLoaded", () => {
