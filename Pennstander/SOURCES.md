@@ -1,4 +1,4 @@
-Penntander otf (just one weight, others are available) from
+Pennstander otf (just one weight, others are available) from
 
 https://github.com/juliusross1/Pennstander/tree/main/fonts
 
