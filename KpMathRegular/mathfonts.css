@@ -12,7 +12,7 @@ http://mirrors.ctan.org/fonts/
 @namespace m url('http://www.w3.org/1998/Math/MathML');
 
 @font-face {
-    font-family: KpMath;
+    font-family: Kp Math Regular;
     src:  url('KpMath-Regular.woff2');
 }
 
