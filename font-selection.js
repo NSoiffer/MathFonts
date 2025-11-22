@@ -28,6 +28,7 @@ const mathfont_list = {
     "KpMathRegular": "Kp Math Regular",
     "KpMathSans": "Kp Math Sans",
     "PennstanderMathRegular": "Kp Math Regular",
+    "LucioleMath": "Luciole Math",
 };
 
 document.addEventListener("DOMContentLoaded", () => {
