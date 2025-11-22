@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MathML Fonts Table</title>
+
+<script src="mathfont-table.js"></script>
+
+<style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 14pt;
+    }
+    th {
+	font-size: 10pt;
+	background-color:white;
+    }
+
+    thead {position:sticky;top:0;}
+    
+    th, td {
+      border: 1px solid #ccc;
+      padding: 6px 10px;
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    td { white-space: nowrap;}
+
+
+    .duplicate {
+      background-color: #fffacd;
+    }
+</style>
+</head>
+<body>
+  <h1>MathML Expressions Font Test</h1>
+
+  <details id="fontselector">
+    <summary><b>Font Column Selection</b></summary>
+  </details>
+
+  <h3>MathML Font Display</h3>
+  <table>
+    <thead>
+      <tr id="hdtr">
+        <th></th>
+        <th>Description</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+	<td>1</td>
+	<td>af</td>
+	<td></td>
+	<td><math><mi>log</mi><mo>&af;</mo><mi>x</mi></math></td>
+      </tr>
+      <tr>
+	<td>2</td>
+	<td>hairsp</td>
+	<td></td>
+	<td><math><mi>log</mi><mo>&hairsp;</mo><mi>x</mi></math></td>
+      </tr>
+      <tr>
+	<td>3</td>
+	<td>mspace</td>
+	<td></td>
+	<td><math><mi>log</mi><mspace width=".05em"/><mi>x</mi></math></td>
+      </tr>
+      <tr>
+	<td>4</td>
+	<td>matrix</td>
+	<td></td>
+	<td>
+	  <math><mrow><mo>(</mo>
+	  <mtable>
+	    <mtr><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd></mtr>
+	    <mtr><mtd><mi>𝛼</mi></mtd><mtd><mi>𝛽</mi></mtd></mtr>
+	  </mtable>
+	  <mo>)</mo></mrow></math>
+	</td>
+      </tr>
+      <tr>
+	<td>5</td>
+	<td>fraction</td>
+	<td></td>
+	<td><math dispay="block"><mfrac><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mn>2</mn></mfrac></math></td>
+      </tr>
+      <tr>
+	<td>6</td>
+	<td>integral</td>
+	<td></td>
+	<td><math display="block"><mrow>
+	  <msubsup>
+	    <mo>∫</mo>
+	    <mn>0</mn>
+	    <mo>∞</mo>
+	  </msubsup>
+	  <mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mi>d</mi><mi>x</mi>
+	</mrow></math></td>
+      </tr>
+      <tr>
+	<td>7</td>
+	<td>Fraktur</td>
+	<td></td>
+	<td><math><mi>𝔄</mi><mi>𝔅</mi><mi>ℭ</mi></math></td>
+      </tr>
+      <tr>
+	<td>8</td>
+	<td>B. Bold</td>
+	<td></td>
+	<td><math><mi>𝔸</mi><mi>𝔹</mi><mi>ℂ</mi></math></td>
+      </tr>
+      <tr>
+	<td>9</td>
+	<td>Script</td>
+	<td></td>
+	<td><math><mi>𝒜</mi><mi>ℬ</mi><mi>𝒞</mi></math></td>
+      </tr>
+      <tr>
+	<td>10</td>
+	<td>Chancery VS1</td>
+	<td></td>
+	<td><math><mi>𝒜︀</mi><mi>ℬ︀</mi><mi>𝒞︀</mi></math></td>
+      </tr>
+      <tr>
+	<td>11</td>
+	<td>Roundhand VS2</td>
+	<td></td>
+	<td><math><mi>𝒜︁︁</mi><mi>ℬ︁</mi><mi>𝒞︁</mi></math></td>
+      </tr>
+                  
+  </tbody>
+</table>
+
+
+
+</body>
+</html>
