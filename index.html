@@ -2,226 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Unicode-Math Accents Table</title>
-
-<script>
-const mathfont_list = {
-    "Default":  "Default fonts (local only)",
-    "STIX": "STIX Two Math",
-    "NewComputerModern": "New Computer Modern Math",
-    "NewComputerModernSans": "New Computer Modern Sans Math",
-    "LatinModern": "Latin Modern Math",
-    "Cambria": "Cambria (local only)",
-    "Asana": "Asana Math",
-    "DejaVu": "DejaVu Math TeX Gyre",
-    "FiraMath": "Fira Math",
-    "Garamond": "Garamond Math",
-    "GFS_NeoHellenic": "GFS NeoHellenic Math",
-    "LeteSansMath": "Lete Sans Math",
-    "Libertinus": "Libertinus Math",
-    "LucidaBright": "Lucida Bright (local only)",
-    "Minion": "Minion (local only)",
-    "TeXGyreBonum": "TeX Gyre Bonum Math",
-    "TeXGyrePagella": "TeX Gyre Pagella Math",
-    "TeXGyreSchola": "TeX Gyre Schola Math",
-    "TeXGyreTermes": "TeX Gyre Termes Math",
-    "XITS": "XITS Math",
-    "NotoSans": "Noto Sans Math",
-    "ArsenalSans": "Arsenal Sans Math",
-    "Plex": "IBM Plex Math",
-    "Erewhon": "Erewhon Math",
-    "OldStandard": "OldStandard Math",
-    "XCharter": "XCharter Math",
-    "KpMathRegular": "Kp Math Regular",
-    "KpMathSans": "Kp Math Sans",
-    "Pennstander": "Pennstander Math Regular",
-    "Luciole": "Luciole Math",
-};
-
-
-let basecss="https://nsoiffer.github.io/MathFonts/";
-if(document.location.href.includes("MathFonts")) {
-    basecss="";
-}
-document.addEventListener("DOMContentLoaded", () => {
-
-    let sty = document.createElement("style");
-    for (let value in mathfont_list) {
-	if(value != "Default" ){
-	    sty.textContent+=`\n .${value}, .${value} math \
-          { font-family: '${mathfont_list[value].replace(' (local only)','')}'; }`;
-	    let mathfont_link = document.createElement("link");
-	    mathfont_link.setAttribute("rel", "stylesheet");
-	    mathfont_link.setAttribute("type", "text/css");
-	    mathfont_link.setAttribute("href", basecss + value + "/mathfonts.css");
-	    document.head.appendChild(mathfont_link);
-
-	}
-    }
-    document.head.appendChild(sty);
-});
-</script>
-
-<style>
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      font-size: 14pt;
-    }
-    th {
-	font-size: 10pt;
-	background-color:white;
-    }
-
-    thead {position:sticky;top:0;}
-    
-    th, td {
-      border: 1px solid #ccc;
-      padding: 6px 10px;
-      text-align: left;
-      vertical-align: middle;
-    }
-
-    td { white-space: nowrap;}
-
-
-    .duplicate {
-      background-color: #fffacd;
-    }
-</style>
+  <title>MathML Fonts</title>
+  <style>
+    body {max-width: 60em; margin: auto;}
+    dt {margin-top:.5em;font-weight: bold;}
+    </style>
 </head>
 <body>
-  <h1>Unicode-Math Accents Table</h1>
-
-  <details id="fontselector">
-    <summary><b>Font Column Selection</b></summary>
-  </details>
-
-  <h3>Table of Accents</h3>
-  <table>
-    <thead>
-      <tr id="hdtr">
-        <th>Unicode</th>
-        <th>Description</th>
-        <th>Glyph</th>
-      </tr>
-    </thead>
-  <tbody>
-    <tr><td>U+0060</td><td>grave</td><td>`</td><td><math><mover accent="true"><mi>x</mi><mo>&#x0060;</mo></mover></math></td></tr>
-    <tr class="duplicate"><td>U+0300</td><td>grave</td><td>◌̀</td><td><math><mover accent="true"><mi>x</mi><mo>&#x0300;</mo></mover></math></td></tr>
-    <tr><td>U+00B4</td><td>acute</td><td>&#x00B4;</td><td><math><mover accent="true"><mi>x</mi><mo>&#x00B4;</mo></mover></math></td></tr>
-    <tr class="duplicate"><td>U+0301</td><td>acute</td><td>◌́</td><td><math><mover accent="true"><mi>x</mi><mo>&#x0301;</mo></mover></math></td></tr>
-    <tr><td>U+005E</td><td>hat</td><td>^</td><td><math><mover accent="true"><mi>x</mi><mo>&#x005E;</mo></mover></math><br/><math><mover accent="true"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x005E;</mo></mover></math></td></tr>
-    <tr class="duplicate"><td>U+0302</td><td>hat</td><td>◌̂</td><td><math><mover accent="true"><mi>x</mi><mo>&#x0302;</mo></mover></math><br/><math><mover accent="true"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x302;</mo></mover></math></td></tr>
-    <tr><td>U+007E</td><td>tilde</td><td>~</td><td><math><mover accent="true"><mi>x</mi><mo>&#x007E;</mo></mover></math><br/><math><mover accent="true"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x007E;</mo></mover></math></td></tr>
-    <tr class="duplicate"><td>U+0303</td><td>tilde</td><td>◌̃</td><td><math><mover accent="true"><mi>x</mi><mo>&#x0303;</mo></mover></math><br/><math><mover accent="true"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x0303;</mo></mover></math></td></tr>
-    <tr><td>U+00AF</td><td>overline</td><td>&#x00AF;</td><td><math><mover accent="true"><mi>x</mi><mo>&#x00AF;</mo></mover></math><br/><math><mover accent="true"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x00AF;</mo></mover></math></td></tr>
-    <tr class="duplicate"><td>U+0304</td><td>macron</td><td>◌̄</td><td><math><mover accent="true"><mi>x</mi><mo>&#x0304;</mo></mover></math><br/><math><mover accent="true"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x0304;</mo></mover></math></td></tr>
-    <tr class="duplicate"><td>U+0305</td><td>overbar</td><td>◌̅</td><td><math><mover accent="true"><mi>x</mi><mo>&#x0305;</mo></mover></math><br/><math><mover accent="true"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x0305;</mo></mover></math></td></tr>
-    <tr class="duplicate"><td>U+005F</td><td>lowline(mover)</td><td>_</td><td><math><mover accent="true"><mi>x</mi><mo>&#x005F;</mo></mover></math><br/><math><mover accent="true"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x0332;</mo></mover></math></td></tr>
-    <tr><td>U+005F</td><td>lowline</td><td>_</td><td><math><munder><mi>x</mi><mo>&#x005F;</mo></munder></math><br/><math><munder><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x0332;</mo></munder></math></td></tr>
-
-    <tr class="duplicate"><td>U+0332</td><td>underbar</td><td>◌̲</td><td><math><munder><mi>x</mi><mo>&#x0332;</mo></munder></math><br/><math><munder><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x0332;</mo></munder></math></td></tr>
-
-    <tr><td>U+0306</td><td>breve</td><td>◌̆</td><td><math><mover accent="true"><mi>x</mi><mo>&#x0306;</mo></mover></math></td></tr>
-    <tr class="duplicate"><td>U+02D8</td><td>breve</td><td>&#x02D8;</td><td><math><mover accent="true"><mi>x</mi><mo>&#x02D8;</mo></mover></math></td></tr>
-    <tr><td>U+002E</td><td>dot above</td><td>.</td><td><math><mover accent="true"><mi>x</mi><mo>&#x002E;</mo></mover></math></td></tr>
-    <tr class="duplicate"><td>U+02D9</td><td>dot above</td><td>&#x02D9;</td><td><math><mover accent="true"><mi>x</mi><mo>&#x02D9;</mo></mover></math></td></tr>
-    <tr class="duplicate"><td>U+0307</td><td>dot above</td><td>◌̇</td><td><math><mover accent="true"><mi>x</mi><mo>&#x0307;</mo></mover></math></td></tr>
-<!--    <tr><td>U+002E U+002E</td><td>double dot</td><td>..</td><td><math><mover accent="true"><mi>x</mi><mo>..</mo></mover></math></td></tr>-->
-    <tr><td>U+00A8</td><td>double dot</td><td>&#x00A8;</td><td><math><mover accent="true"><mi>x</mi><mo>&#x00A8;</mo></mover></math></td></tr>
-    <tr class="duplicate"><td>U+0308</td><td>double dot</td><td>◌̈</td><td><math><mover accent="true"><mi>x</mi><mo>&#x0308;</mo></mover></math></td></tr>
-    <tr><td>U+0309</td><td>hook above</td><td>◌̉</td><td><math><mover accent="true"><mi>x</mi><mo>&#x0309;</mo></mover></math></td></tr>
-    <tr><td>U+02DA</td><td>ring</td><td>&#x02DA;</td><td><math><mover accent="true"><mi>x</mi><mo>&#x02DA;</mo></mover></math></td></tr>
-    <tr class="duplicate"><td>U+030A</td><td>ring</td><td>◌̊</td><td><math><mover accent="true"><mi>x</mi><mo>&#x030A;</mo></mover></math></td></tr>
-    <tr><td>U+02C7</td><td>caron</td><td>&#x02C7;</td><td><math><mover accent="true"><mi>x</mi><mo>&#x02C7;</mo></mover></math></td></tr>
-    <tr class="duplicate"><td>U+030C</td><td>caron</td><td>◌̌</td><td><math><mover accent="true"><mi>x</mi><mo>&#x030C;</mo></mover></math></td></tr>
-    <tr><td>U+20D0</td><td>left harpoon</td><td>◌⃐</td><td><math><mover accent="true"><mi>x</mi><mo>&#x20D0;</mo></mover></math><br/><math><mover accent="true"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x20D0;</mo></mover></math></td></tr>
-    <tr class="duplicate"><td>U+21BC</td><td>left harpoon</td><td>&#x21BC;</td><td><math><mover accent="true"><mi>x</mi><mo>&#x21BC;</mo></mover></math><br/><math><mover accent="true"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x21BC;</mo></mover></math></td></tr>
-    <tr><td>U+20D1</td><td>right harpoon</td><td>◌⃑</td><td><math><mover accent="true"><mi>x</mi><mo>&#x20D1;</mo></mover></math><br/><math><mover accent="true"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x20D1;</mo></mover></math></td></tr>
-    <tr class="duplicate"><td>U+21C0</td><td>right harpoon</td><td>&#x21C0;</td><td><math><mover accent="true"><mi>x</mi><mo>&#x21C0;</mo></mover></math><br/><math><mover accent="true"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x21C0;</mo></mover></math></td></tr>
-    <tr><td>U+20D7</td><td>right arrow</td><td>◌⃗</td><td><math><mover accent="true"><mi>x</mi><mo>&#x20D7;</mo></mover></math><br/><math><mover accent="true"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x20D7;</mo></mover></math></td></tr>
-    <tr class="duplicate"><td>U+2192</td><td>right arrow</td><td>⃗</td><td><math><mover accent="true"><mi>x</mi><mo>&#x2192;</mo></mover></math><br/><math><mover accent="true"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x2192;</mo></mover></math></td></tr>
-    <tr class="duplicate"><td>U+27F6</td><td>long right arrow</td><td>&#x27F6;</td><td><math><mover accent="true"><mi>x</mi><mo>&#x27F6;</mo></mover></math><br/><math><mover accent="true"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x27F6;</mo></mover></math></td></tr>
-    <tr><td>U+20DB</td><td>triple dots</td><td>◌⃛</td><td><math><mover accent="true"><mi>x</mi><mo>&#x20DB;</mo></mover></math></td></tr>
-    <tr><td>U+20DC</td><td>four dots</td><td>◌⃜</td><td><math><mover accent="true"><mi>x</mi><mo>&#x20DC;</mo></mover></math></td></tr>
-    <tr><td>U+23B4</td><td>top square bracket</td><td>&#x23B4;</td><td><math><mover accent="true"><mi>x</mi><mo>&#x23B4;</mo></mover></math><br/><math><mover accent="true"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x23B4;</mo></mover></math></td></tr>
-    <tr><td>U+23B5</td><td>bottom square bracket</td><td>&#x23B5;</td><td><math><munder><mi>x</mi><mo>&#x23B5;</mo></munder></math><br/><math><munder><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x23B5;</mo></munder></math></td></tr>
-    <tr><td>U+23DC</td><td>top parenthesis</td><td>&#x23DC;</td><td><math><mover accent="true"><mi>x</mi><mo>&#x23DC;</mo></mover></math><br/><math><mover accent="true"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x23DC;</mo></mover></math></td></tr>
-    <tr><td>U+23DD</td><td>bottom parenthesis</td><td>&#x23DD;</td><td><math><munder><mi>x</mi><mo>&#x23DD;</mo></munder></math><br/><math><munder><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x23DD;</mo></munder></math></td></tr>
-    <tr><td>U+23DE</td><td>top curly bracket</td><td>&#x23DE;</td><td><math><mover accent="true"><mi>x</mi><mo>&#x23DE;</mo></mover></math><br/><math><mover accent="true"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x23DE;</mo></mover></math></td></tr>
-    <tr><td>U+23DF</td><td>bottom curly bracket</td><td>&#x23DF;</td><td><math><munder><mi>x</mi><mo>&#x23DF;</mo></munder></math><br/><math><munder><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy='true'>&#x23DF;</mo></munder></math></td></tr>
-  </tbody>
-</table>
-
-  <script>
-    // Replicate the existing 4th cell in each tbody row across all font columns
-    // using the class names from the thead. Keeps first three columns unchanged.
-    document.addEventListener('DOMContentLoaded', function () {
-	const table = document.querySelector('table');
-
-      if (!table) return;
-      const hdtr = document.getElementById('hdtr');
+  <h1>OpenType Math Font Tests</h1>
+  <p><a href="https://github.com/NSoiffer/MathFonts">This repository</a>
+	     hosts a collection of OpenType Math fonts in OTF and WOFF2 formats
+    along with some test pages displaying the pages with MathML.</p>
 
 
-      for (let value in mathfont_list) {
-	       let th = document.createElement("th");
-	     th.setAttribute("class",value);
-th.textContent=mathfont_list[value];
-hdtr.appendChild(th);
-      }
-  
-      const rows = Array.from(table.querySelectorAll('tbody tr'));
-      rows.forEach(row => {
-        const cells = Array.from(row.querySelectorAll('td'));
-        // if there are fewer than 4 cells, skip
-        if (cells.length < 4) return;
-        // content to replicate - assume the 4th cell holds the sample
-        const templateHTML = cells[3].innerHTML;
-
-        // remove any cells from index 3 onward (we'll recreate them)
-        for (let i = cells.length - 1; i >= 3; i--) {
-          cells[i].remove();
-        }
-
-        // append a td for each header class (in order)
-     for (let value in mathfont_list) {
-          const td = document.createElement('td');
-          td.className = value;
-          td.innerHTML = templateHTML;
-          row.appendChild(td);
-        };						
-      });
-        const fontsel=document.getElementById("fontselector");
-     for (let value in mathfont_list) {
-		    const sp = document.createElement('span');
-		    const t = document.createTextNode(' ');
-		    sp.style.whiteSpace="nowrap";
-		    const inp = document.createElement('input');
-		    inp.type="checkbox";
-		    inp.id="select"+value;
-		    inp.checked=true;
-		    inp.setAttribute("onChange","showColumn(this)");
-		    const lb = document.createElement('label');
-		    lb.textContent=value + "   ";
-                    lb.setAttribute("for","select"+value);
-		    sp.appendChild(inp);
-		    sp.appendChild(lb);
-		    fontsel.appendChild(sp);
-		    fontsel.appendChild(t);
-		}
-    });
-    function showColumn(n) {
-	const c=n.id.replace('select','*.');
-	if(n.checked) {
-	    Array.from(document.querySelectorAll(c)).forEach(cell=> {
-                cell.style.display='table-cell';
-})} else {
-	    Array.from(document.querySelectorAll(c)).forEach(cell=> {
-                cell.style.display='none';
-	    })}	    
-    }
-  </script>
+  <dl>
+    <dt><a href="math-accents.html">MathML Accents Font Test</a></dt>
+    <dd>Test showing a range of MathML accent constructs side by side
+      in a wide table. A column selector allows fewer fonts to be dislayed.</dd>
+    <dt><a href="math-accents.html">MathML Expression Font Test</a></dt>
+    <dd>Test showing a range of MathML examples side by side
+      in a wide table. A column selector allows fewer fonts to be dislayed.</dd>
+    <dt><a href="mathml.html">MathML test</dt>
+    <dd>Original test file
+      from <a href="https://fred-wang.github.io/MathFonts/">"Frédéric Wang's
+      upstream repository</a> showing MathML fonts in context with a
+      drop down menu allowing a different font to be chosen. The file
+      has been slighly modified to fit the directory layout here and
+      show the extended set of fonts. This test will also show text fonts in some cases
+      but the text fonts rely on locally installed files.</dd>
+    </dl>
 
 </body>
 </html>
